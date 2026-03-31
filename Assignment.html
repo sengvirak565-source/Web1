@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Minimalist Portfolio</title>
+
+    <!-- CSS -->
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+        }
+
+        [data-theme='dark'] {
+            --bg-color: #1a1a1a;
+            --text-color: #f4f4f4;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: sans-serif;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Your Name</h1>
+    <button id="theme-toggle">Dark Mode</button>
+</header>
+
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a developer-in-training building cool things with code.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Work</h2>
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>A brief description of what this project does.</p>
+        </div>
+    </section>
+</main>
+
+<!-- JavaScript -->
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'dark') {
+            body.removeAttribute('data-theme');
+            toggleButton.innerText = 'Dark Mode';
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            toggleButton.innerText = 'Light Mode';
+        }
+    });
+</script>
+
+</body>
+</html>
+[3/31/2026 10:01 PM] សេង វីរៈ៚: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Test Page</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="Test.css">
+</head>
+<body>
+
+<h1>Hello from Test.html</h1>
+<p>This is a paragraph styled by Test.css</p>
+
+<!-- Link to external JS -->
+<script src="Test.js"></script>
+
+<!-- Optional link to another HTML (Pic.html) -->
+<a href="Pic.html" target="_blank">Go to Pic.html</a>
+
+</body>
+</html>
